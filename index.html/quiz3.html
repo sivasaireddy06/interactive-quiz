@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Interactive Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+color:"green";
+    }
+    .quiz-container {
+        background: url("data:image/jpeg;base64,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");
+background-size: 800px,100px;
+
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    .question {
+        font-weight: bold;
+    }
+    .options label {
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="quiz-container">
+    <h1>Interactive Quiz</h1><hz>
+    <form id="quiz-form">
+        <div class="question">1:To insert a JavaScript into an HTML page, which tag is used??</div>
+        <div class="options">
+            <label><input type="radio" name="q1" value="a">a) < script></script></label>
+            <label><input type="radio" name="q1" value="b">b) < javascript></javascript></label>
+            <label><input type="radio" name="q1" value="c">c) < js></js></label>
+        </div>
+
+        <div class="question">2: Which of the below is used in Java script to insert special characters??</div>
+        <div class="options">
+            <label><input type="radio" name="q2" value="a">a) &</label>
+            <label><input type="radio" name="q2" value="b">b) /</label>
+            <label><input type="radio" name="q2" value="c">c) !</label>
+        </div>
+
+        <div class="question">3:Which of the following is correct to write â€œHello Worldâ€ on the web page??</div>
+        <div class="options">
+            <label><input type="radio" name="q3" value="a">a) document.write(â€œHello Worldâ€ ) </label>
+            <label><input type="radio" name="q3" value="b">b) print(â€œHello Worldâ€ )</label>
+            <label><input type="radio" name="q3" value="c">c) response.write(â€œHello Worldâ€ )</label>
+        </div>
+
+        <button type="button" id="submit-button">Submit </button>
+    </form>
+    <div id="result"></div>
+</div>
+
+<script>
+    document.getElementById('submit-button').addEventListener('click', function() {
+        const form = document.getElementById('quiz-form');
+        const answers = {
+            q1: form.q1.value,
+            q2: form.q2.value,
+            q3: form.q3.value
+        };
+
+        const correctAnswers = {
+            q1: 'a',
+            q2: 'b',
+            q3: 'a'
+        };
+
+        let score = 0;
+        for (const question in answers) {
+            if (answers[question] === correctAnswers[question]) {
+                score++;
+            }
+        }
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `You scored ${score} out of ${Object.keys(correctAnswers).length} correct.`;
+    });
+</script>
+</body>
+</html>
